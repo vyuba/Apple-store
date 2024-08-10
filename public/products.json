@@ -1,0 +1,224 @@
+[
+    {
+      "id": "1",
+      "name": "iPhone 15 Pro",
+      "description": "The latest iPhone with advanced features and capabilities.",
+      "price": "$999",
+      "category": "smartphone",
+      "storage": ["128GB", "256GB", "512GB"],
+      "colors": ["Silver", "Graphite", "Gold", "Titanium"],
+      "images": [
+        {
+          "url": "/Iphone 15 Pro titatnium.png",
+          "alt": "Front view of iPhone 15 Pro",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "iPhone 15",
+      "description": "A powerful iPhone with an improved camera system.",
+      "price": "$799",
+      "category": "smartphone",
+      "storage": ["128GB", "256GB"],
+      "colors": ["Blue", "Pink", "Yellow", "Green", "Black", "White"],
+      "images": [
+        {
+          "url": "/Iphone 15 Pro Graphite.png",
+          "alt": "Front view of iPhone 15",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "AirPods Pro",
+      "description": "Noise-cancelling wireless earbuds with excellent sound quality.",
+      "price": "$249",
+      "category": "accessory",
+      "storage": ["N/A"],
+      "colors": ["White"],
+      "images": [
+        {
+          "url": "/airpods pro, png.png",
+          "alt": "AirPods Pro",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "AirPods 3rd Gen",
+      "description": "The latest AirPods with spatial audio and longer battery life.",
+      "price": "$179",
+      "category": "accessory",
+      "storage": ["N/A"],
+      "colors": ["White"],
+      "images": [
+        {
+          "url": "/airpods pro, png.png",
+          "alt": "AirPods 3rd Gen",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "iPhone 14 Pro",
+      "description": "An iPhone with a stunning display and powerful performance.",
+      "price": "$999",
+      "category": "smartphone",
+      "storage": ["128GB", "256GB", "512GB"],
+      "colors": ["Silver", "Graphite", "Gold", "Deep Purple"],
+      "images": [
+        {
+          "url": "/iphone 14.png",
+          "alt": "Front view of iPhone 14 Pro",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Mac Mini M2",
+      "description": "Compact and powerful desktop with Apple's M2 chip.",
+      "price": "$699",
+      "category": "laptop",
+      "storage": ["256GB", "512GB"],
+      "colors": ["Silver", "Space Gray"],
+      "images": [
+        {
+          "url": "/Mac Mini MacBook Pro.png",
+          "alt": "Mac Mini M2",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "iPad Mini",
+      "description": "A compact iPad with great performance and portability.",
+      "price": "$499",
+      "category": "tablet",
+      "storage": ["64GB", "256GB"],
+      "colors": ["Space Gray", "Silver", "Pink", "Purple", "Starlight"],
+      "images": [
+        {
+          "url": "/ipad-pro, png.png",
+          "alt": "iPad Mini",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Apple Watch Ultra",
+      "description": "A rugged Apple Watch designed for extreme conditions.",
+      "price": "$799",
+      "category": "watch",
+      "storage": ["32GB"],
+      "colors": ["Titanium"],
+      "images": [
+        {
+          "url": "/Apple Watch Series 3.png",
+          "alt": "Apple Watch Ultra",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "AirPods Max",
+      "description": "High-fidelity over-ear headphones with excellent sound quality.",
+      "price": "$549",
+      "category": "accessory",
+      "storage": ["N/A"],
+      "colors": ["Space Gray", "Silver", "Sky Blue", "Pink"],
+      "images": [
+        {
+          "url": "/apple airpods max, png.png",
+          "alt": "AirPods Max",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "MacBook Pro 14",
+      "description": "A versatile MacBook Pro with a 14-inch display and powerful performance.",
+      "price": "$1999",
+      "category": "laptop",
+      "storage": ["512GB", "1TB", "2TB"],
+      "colors": ["Space Gray", "Silver"],
+      "images": [
+        {
+          "url": "/Mac Book Pro.png",
+          "alt": "MacBook Pro 14",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "iPad 9th Gen",
+      "description": "An entry-level iPad with a large display and great performance.",
+      "price": "$329",
+      "category": "tablet",
+      "storage": ["64GB", "256GB"],
+      "colors": ["Space Gray", "Silver", "Pink", "Blue"],
+      "images": [
+        {
+          "url": "/ipad-pro, png.png",
+          "alt": "iPad 9th Gen",
+          "width": 1600,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Apple Watch Series 7",
+      "description": "The previous generation Apple Watch with a large display.",
+      "price": "$349",
+      "category": "watch",
+      "storage": ["32GB"],
+      "colors": ["Silver", "Graphite", "Green", "Red"],
+      "images": [
+        {
+          "url": "/Apple Watch Series 2.png",
+          "alt": "Apple Watch Series 7",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "AirPods 2nd Gen",
+      "description": "Affordable wireless earbuds with a classic design.",
+      "price": "$129",
+      "category": "accessory",
+      "storage": ["N/A"],
+      "colors": ["White"],
+      "images": [
+        {
+          "url": "/airpods pro, png.png",
+          "alt": "AirPods 2nd Gen",
+          "width": 150,
+          "height": 150
+        }
+      ]
+    }
+  ]
+  

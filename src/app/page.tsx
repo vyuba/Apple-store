@@ -14,8 +14,12 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-
+import Navbar from "@/components/navbar";
+// import { Icons } from "@/components/icons"
 // Define TypeScript types in the same file
+import heroImage from '/public/apple airpods max, png.png'
+import product from '/home/vyuba/projects/googleApi/my-app/public/products.json'
+import Link from "next/link";
 interface KnowledgePanel {
   description: {
     text: string;
@@ -46,6 +50,24 @@ interface RelatedKeywords {
   keywords: Array<{
     keyword: string;
   }>;
+}
+
+interface Image {
+  url: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+interface product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+  storage: Array< string | string | string >;
+  colors: Array< string | string >;
+  images: Image[];
 }
 
 interface ApiResponse {
@@ -89,76 +111,39 @@ export default function Home() {
 
   return (
     <main className="text-center w-full px-3 mx-auto flex flex-col gap-10">
-      <h1 className="text-2xl p-2">Google Search API</h1>
-      <div className="flex items-center justify-center gap-2 max-w-[500px] mx-auto">
-        <Input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          type="text"
-          className="placeholder:capitalize"
-          placeholder="What would you like to search for?"
-        />
-        <Button
-          variant={"default"}
-          size={"sm"}
-          className="capitalize"
-          onClick={fetchData}
-        >
-          Search
-        </Button>
+      <Navbar/>
+      <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-2 max-w-[700px] m-0 mx-auto">
+      {product.map((data) => (
+         <Card className="text-left px-3 py-4" key={data.id}>
+          <CardHeader>
+            {data.images.map((image, index) => (
+              <div className="w-full h-30 flex items-center justify-center bg-primary-foreground rounded-sm" key={index}>
+                <Image
+                  src={image.url}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  layout="responsive"
+                />
+              </div>
+            ))}
+            <CardTitle className="text-lg capitalize" >{data.name}</CardTitle>
+            {/* <CardDescription>{data.description}</CardDescription> */}
+          </CardHeader>
+          <CardContent>
+            <p>Card Content</p>
+          </CardContent>
+          <CardFooter className="flex flex-row items-center capitalize justify-between w-full">
+              <ul className="">
+                {data.colors[0]}
+              </ul>
+              <Link href='src/product/page.tsx'>
+                <Button>Buy</Button>
+              </Link>
+          </CardFooter>
+        </Card>
+      ))}
       </div>
-        <div className="w-full flex flex-col">
-          {loading ? (
-            <div className="flex flex-col space-y-3">
-              <Skeleton className="h-[125px] w-full rounded-xl" />
-              <div className="space-y-2">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-full" />
-              </div>
-              <Skeleton className="h-[125px] w-full rounded-xl" />
-              <div className="space-y-2">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-full" />
-              </div>
-              <Skeleton className="h-[125px] w-full rounded-xl" />
-              <div className="space-y-2">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-full" />
-              </div>
-              <Skeleton className="h-[125px] w-full rounded-xl" />
-              <div className="space-y-2">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-full" />
-              </div>
-            </div>
-          ) : (
-            <div className="flex flex-col gap-5">
-              {data && data.results.map((result) => (
-                <Card key={result.position} className="flex flex-col px-4 py-4 text-left gap-3">
-                  <CardHeader className="text-left">
-                    <CardTitle>{result.title}</CardTitle>
-                    <CardDescription>{result.description}</CardDescription>
-                    {data.knowledge_panel?.image && (
-                      <Image
-                        src={data.knowledge_panel.image.url}
-                        alt="Knowledge Panel Image"
-                        width={data.knowledge_panel.image.width}
-                        height={data.knowledge_panel.image.height}
-                        layout="fixed"
-                      />
-                    )}
-                  </CardHeader>
-                  <CardContent>
-                    <p>{data.knowledge_panel?.description.text || 'No description available'}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <a href={data.knowledge_panel?.description.url || '#'}>{data.knowledge_panel?.description.url || 'No description available'}</a>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          )}
-        </div>
     </main>
   );
 }

@@ -137,9 +137,7 @@ export default function Home() {
               <ul className="">
                 {data.colors[0]}
               </ul>
-              <Link href='src/product/page.tsx'>
                 <Button>Buy</Button>
-              </Link>
           </CardFooter>
         </Card>
       ))}

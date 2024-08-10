@@ -18,7 +18,7 @@ import Navbar from "@/components/navbar";
 // import { Icons } from "@/components/icons"
 // Define TypeScript types in the same file
 import heroImage from '/public/apple airpods max, png.png'
-import product from '/home/vyuba/projects/googleApi/my-app/public/products.json'
+import product from '/public/products.json'
 import Link from "next/link";
 interface KnowledgePanel {
   description: {
